@@ -17,7 +17,7 @@ def game():
             energy -= 1
             if energy >0:
                 print("\nYou see tall trees and hear wolves howling🐺🐺")
-                print("You have choices : \n1->climb Tres 'Energy reduce to 1'\n2->Run Back 'Energy Reduces to 1'\n3->stay still 'Energy Reduces to 0'")
+                print("You have choices : \n1->climb Trees 'Energy reduce to 1'\n2->Run Back 'Energy Reduces to 1'\n3->stay still 'Energy Reduces to 0'")
                 choice = int(input("Enter Your Choice: "))
                 if choice == 1:
                     print("You climb the tree and spot smoke far away")
@@ -35,7 +35,7 @@ def game():
             energy -= 1
             if energy > 0 :
                 print("\nYou found an abandoned campfire and a bag of supplies.")
-                print("You have choices : \n1->Check Bag 'Energy reduce to 0'\n2->Ignore it  'Energy Reduces to 0'\n3->Take a nap 'Energy gains bt 1'")
+                print("You have choices : \n1->Check Bag 'Energy reduce to 0'\n2->Ignore it  'Energy Reduces to 0'\n3->Take a nap 'Energy gains by 1'")
                 choice = int(input("Enter Your choice : "))
                 if choice == 1:
                     print("You found food inside!😃 ~~~Energy gains by 2")
@@ -50,9 +50,47 @@ def game():
                 print("You run out of your energy")
                 print("Game Over!☠️")
                 break
+        elif user == 's':
+            energy -= 1
+            if energy > 0 :
+                print("\nThere’s a wide river with a broken bridge.")
+                print("You have choices : \n1->Try crossing 'Energy reduce to 1'\n2->Search Around  'Energy Reduces to 0'\n3->Rest 'Energy gains by 1'")
+                choice = int(input("Enter Your choice : "))
+                if choice == 1:
+                    energy -= 1
+                    print("You slipped but managed to swim across ~~~Energy Reduces by 2")
+                    energy -= 2
+                elif choice==2:
+                    print("You found a dry path leading Gate.~~~Energy gains by 1")
+                    energy +=1
+                else:
+                    energy +=1
+                    print("You rest by the water.~~~Energy gains by 1")
 
-                    
-
+            else:
+                print("You run out of your energy")
+                print("Game Over!☠️")
+                break
+        elif user == 'w':
+            energy -= 1
+            if energy > 0 :
+                print("\nYou found a dark cave with a faint glow inside.")
+                print("You have choices : \n1->Enter Cave 'Energy reduce to 0'\n2->Shout  'Energy Reduces to 0'\n3->Walk Away 'Energy gains by 0'")
+                choice = int(input("Enter Your choice : "))
+                if choice == 1:
+                    print("You found glowing mushrooms. ~~~Energy gains by 2")
+                    energy += 2
+                elif choice==2:
+                    print("Your voice echoes — something growls back!~~~Energy Reduces by 2")
+                    energy -= 2
+                else:
+                    energy +=1
+                    print("You stay safe, but waste time.~~~Energy Reduces by 1")
+                    energy -= 2
+            else:
+                print("You run out of your energy")
+                print("Game Over!☠️")
+                break
 
         else:
             break
