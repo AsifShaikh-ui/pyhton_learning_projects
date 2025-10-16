@@ -20,8 +20,17 @@ def game():
                 print("You have choices : \n1->climb Trees 'Energy reduce to 1'\n2->Run Back 'Energy Reduces to 1'\n3->stay still 'Energy Reduces to 0'")
                 choice = int(input("Enter Your Choice: "))
                 if choice == 1:
-                    print("You climb the tree and spot smoke far away")
+                    print("You climb the tree and spot smoke far away - may be a camp a village🏡")
                     energy -= 1
+                    print("\n You have choices : \n1->Go Toward Smoke 'Energy reduce to 1'\n2->Rest on branch Energy Reduces to 0'")
+                    if energy > 0:
+                        sub_choice = int(input("Enter your choice : "))
+                        if(sub_choice == 1):
+                            print("You follow the smoke and find an abandoned campfire🔥")
+                            print("There is a narrow path leading out of the forest! YOu survived🌄")
+                        elif sub_choice == 2:
+                            print("You stay up there too long and loose balance , falling down")
+                            print("From your falling voice the wolf🐺 occured and you died☠️")
                 elif choice==2:
                     print("You rush back to the Starting point")
                     energy -= 1
